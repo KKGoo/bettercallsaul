@@ -1,0 +1,25 @@
+body {
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 1;
+    padding: 20px;
+    height: 100%;
+    background: #eee;
+}
+.demo-title {
+    text-align:center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+.pricing-table {
+    display: table;
+    width: 100%;
+    .pricing-option {
+        width: 28%;
+        background:white;
+        float: left;
+        padding: 2%;
+        text-align: center;
+        transition: all .3s ease-in-out;
+        &:nth-child(even) {
+            margin: 0 2%;
+        }
