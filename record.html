@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="record.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .wrapper{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: [inicio] 1fr [fila1] 1fr [final];
+        grid-template-rows: 90px 120px 1fr auto 1fr;
+    }
+    .item:nth-of-type(1){
+        background-color:#023E73 ;
+        color: white;
+        padding: 30px 40px;
+        justify-content: left;
+        display: flex;
+        align-items: center;
+    }
+    .item:nth-of-type(2){
+        background-color: #023E73;
+        color: white;
+        padding: 30px 40px;
+        justify-content: right;
+        align-items: center;
+        flex-direction: row-reverse;
+        display: flex;
+    }
+    .item:nth-of-type(3){
+        grid-column: inicio/final;
+        padding: 0px 40px;
+        align-items: center;
+        display: flex;
+    }
+    .item:nth-of-type(4){
+        grid-column: inicio/final;
+        padding: 0px 40px;
+    }
+    .item:nth-of-type(5){
+        grid-column: inicio/fila1;
+        padding: 0px 40px;
+        align-items: center;
+        align-content: center;
+        justify-content: start;
+        display: flex;
+    }
+    .item:nth-of-type(6){
+        padding: 0px 40px;
+        align-content: center;
+        justify-content: start;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .item:nth-of-type(7){
+        background-color: #023E73;
+        text-align: center;
+        color: white;
+        grid-column: inicio/final;
+    }
+    .form{
+        display: flex;
+        justify-content: start;
+        border-top: lightgray 0.5px solid;
+    }
+    button{
+        margin: 20px;
+        display: block;
+    }
+    @media screen and (max-width: width 1110px) {
+
+    }
+    @media screen and (max-width: 825px) {
+        .wrapper{
+            grid-template-rows: 90px 90px 1fr auto 1fr;
+        }
+        .item:nth-of-type(1){
+            grid-column: inicio/final;
+            justify-content: center;
+        }
+        .item:nth-of-type(2){
+            display: none;
+        }
+        .item:nth-of-type(3){
+
+            padding: 0px 20px;
+        }
+        .item:nth-of-type(4){
+            padding:0px 20px;
+        }
+        h1{
+            font-size: 26px;
+        }
+        button{
+            margin: 10px;
+        }
+        .item:nth-of-type(5){
+            padding: 0px 20px;
+        }
+        .item:nth-of-type(6){
+            padding: 0px 20px;
+        }
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="item"><h1 class="tittle">Judicial Dependent</h1></div>
+    <div class="item"><li class="menulist">Sing out</li>
+        <li class="menulist">Account</li></div>
+    <div class="item">
+        <h1>Modify judicial ranch</h1> 
+    </div>
+        <div class="item">
+            <div class="form"><p class="A">Server date</p> <p class="B">***********</p></div>
+        <div class="form"><p class="A">Time since last query</p> <p class="B">********</p></div>
+        <div class="form"><p class="A">Office</p><p class="B">************</p></div>
+        <div class="form"><p class="A">Speaker</p><p class="B">************</p></div>
+        <div class="form"><p class="A">Type</p><p class="B">************</p></div>
+        <div class="form"><p class="A">Class</p><p class="B">*********</p></div>
+        <div class="form"><p class="A">Performance</p><p class="B">********************** ************************</p></div>
+        <div class="form"><p class="A">Subject</p><p class="B">**************</p></div>
+        <div class="form"><p class="A">Resource</p><p class="B">************</p></div>
+        <div class="form"><p class="A">File Location</p><p class="B">************</p>
+    </div>
+    </div>
+    <div class="item"> <button class="delete">Delete</button></div>
+    <div class="item">
+        <button>Save</button></div>
+    <div class="item"> <p class="fot">contact us</p>
+    <p class="fot"> 2020 © The Diego Enterprce.</p>
+   <p class="fot">Hecho en Colombia.</p></div></div>
+    
+    
+</body>
+</html>

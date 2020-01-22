@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profledex.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+        .wrapper{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr ;  
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
+        .item:nth-of-type(2){
+            margin: 0px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .item:nth-of-type(3){
+            margin: 0px 40px;
+        }
+        .item:nth-of-type(4){
+            margin: 0px 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+        }
+        .item:nth-of-type(5){
+            padding: 30px;
+        color:white ;
+        margin: 0px;
+        background-color: #023E73;
+        height: 120px;
+        text-align: center;
+        }
+        @media screen and (max-width: 850px) {
+            .wrapper{
+                grid-template-rows: 0.8fr 1fr 1fr 1fr 1fr ;
+            }
+            .menu{
+                display: none;
+            }
+            input{
+                height: 7px;
+                padding: 7px;
+            }
+            .tittle{
+                font-size: 20px;
+            }
+            .item:nth-of-type(1){
+                padding: 20px 40px;
+            }
+        }
+        @media screen and (max-width: 520px) {
+            .item:nth-of-type(4){
+                margin: 0px 20px;
+            }
+            h2{
+                font-size: 20px;
+            }
+            .wrapper{
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            }
+            .item:nth-of-type(1){
+                flex-direction: column;
+                height: auto;
+            }
+            button{
+                margin: 0;
+                
+            }
+            th, td{
+        padding: 7px;
+        margin: 0;
+        font-size: 14px;
+        }
+        h2{
+            font-size: 12px;
+        }
+        .item:nth-of-type(3)
+        {
+        margin: 0px 20px;
+        } 
+        }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="item"><h1 class="tittle">Judicial Dependent</h1> <input type="text"> <nav class="menu">
+            <li class="menulist">Sing out</li>
+            <li class="menulist">Account</li>
+        </nav> </div>
+        <div class="item"><button>Add Process</button></div>
+        <div class="item"><table>
+            <thead>
+                <tr>
+                    <th>Code</th><th>Name</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>####</td><td>julio Jaramillo</td>
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td>
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td> 
+            </tr>
+            <tr>
+                <td>####</td> <td>julio Jaramillo</td>
+            </tr>
+        </table>
+        </div>
+        <div class="item"><button>Prev</button> <h2>Page 1/80</h2> <button>Next</button></div>
+        <div class="item"><p class="fot">contact us</p>
+            <p class="fot"> 2020 © The Diego Enterprce.</p>
+           <p class="fot">Hecho en Colombia.</p></div>
+    </div>
+</body>
+</html>

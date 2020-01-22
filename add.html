@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="addex.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Process </title>
+</head>
+<style>
+.wrapper{
+    height: 100vh;
+    grid-template-rows: 90px 120px 1fr auto 1fr ;
+    grid-template-columns: [inicio] 1fr [fila1] 1fr [final] ;
+    display: grid;
+}
+.item:nth-of-type(1){
+    grid-column: inicio / fila1;
+    background-color: #023E73;
+    color: white;
+    padding: 30px 30px 30px 40px;
+    display: flex;
+    align-items: center;
+}
+.item:nth-of-type(2){
+    background-color: #023E73;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    align-content: center;
+    justify-content: right;
+    padding: 30px;
+}
+.item:nth-of-type(3){
+    grid-column: inicio / final;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+}
+.item:nth-of-type(4){
+    grid-column: inicio/final;
+    display: grid;
+    grid-template-columns: 1fr ;
+    padding: 0px 40px;
+}
+.item:nth-of-type(5){
+    background-color: rgb(215, 228, 245);
+    grid-column: inicio / final;
+    justify-content: space-between;
+    align-content: center;
+    display: flex;
+    margin: 0% 2%;
+}
+.item:nth-of-type(6){
+    background-color: #023E73;
+    grid-column: inicio/final;
+    text-align: center;
+    color: white;
+    margin-top: 3%;
+}
+@media screen and (max-width: 768px) {
+    .wrapper{
+        grid-template-rows: 75px 90px 1fr auto 1fr ;
+    }
+    .item:nth-of-type(2){
+        display: none;
+    }
+    .item:nth-of-type(1){
+        grid-column: inicio/final;
+        text-align: center;
+        justify-content: center;
+    }
+    h1{
+        font-size: 26px;
+    }
+    button{
+        margin: 10px;
+    }   
+}
+@media screen and (max-width: 450px) {
+    .item:nth-of-type(4){
+        padding: 0px 20px;
+    }
+    .item:nth-of-type(3){
+        padding: 0px 20px;
+    }
+    .disp{
+        width: 180px;
+    }
+    input{
+        width: 176px;
+    }
+}
+</style>
+<body>
+<div class="wrapper">
+    <div class="item"> <h1>Judicial Dependent</h1></div>
+    <div class="item"> <li class="menulist">Sing out</li>
+     <li class="menulist">Account</li></div>
+    <div class="item"> <h1>Add New Process</h1></div>
+    <div class="item">  
+        
+         <div class="details">   <p>Sistem:</p>
+             <select class="disp">
+                 <option value="volvo">Sistem</option>
+                 <option value="saab">Saab</option>
+                 <option value="opel">Opel</option>
+                 <option value="audi">Audi</option>
+               </select>
+         </div>
+ 
+         <div class="details"><p>City:</p> <select class="disp">
+             <option value="volvo">City</option>
+             <option value="saab">Saab</option>
+             <option value="opel">Opel</option>
+             <option value="audi">Audi</option>
+           </select></div>
+ 
+         <div class="details"><p>Name:</p><input type="text" placeholder=""></div>
+         
+         <div class="details"><p>Code:</p><input type="number" placeholder=""> </div>
+        
+         <div class="details"><p>Entity: </p>  <select class="disp">
+             <option value="volvo">Entity</option>
+             <option value="saab">Saab</option>
+             <option value="opel">Opel</option>
+             <option value="audi">Audi</option>
+            
+           </select></div>
+     
+ </div>
+ 
+    <div class="item"> <button class="save">Save</button><button class="cancel">Cancel</button></div>
+    <div class="item"> <p class="fot">contact us</p>
+        <p class="fot"> 2020 © The Diego Enterprce.</p>
+       <p class="fot">Hecho en Colombia.</p></div>
+    
+</div>
+</body>
+</html>
