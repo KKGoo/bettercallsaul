@@ -1,0 +1,109 @@
+ 
+
+    .content {
+        padding: 0px 20px;
+        margin-top: 60px;
+        transition: 0.8s;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 250px;
+    }
+
+    .page {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .reportes {
+        background-color: #3f5cb4;
+    }
+
+    
+
+    .content {
+        grid-auto-rows: 300px;
+        background-color: whitesmoke;
+
+    }
+
+    .cont {
+        border-radius: 1px;
+        height: auto;
+        margin: 20px 10px;
+        color: black;
+        padding: 20px 10px;
+        background-color: white;
+    }
+
+  
+
+
+    @media screen and (max-width: 1040px) {
+        .content {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .content {
+            background-color: whitesmoke;
+            grid-auto-rows: 300px;
+            grid-template-columns: 1;
+            margin-left: 0;
+
+        }
+
+        .cont:nth-of-type(1) {
+            box-shadow: none;
+        }
+
+        .cont {
+            border-radius: 1px;
+            height: auto;
+            margin: 20px 10px;
+            color: black;
+            padding: 20px 10px;
+            background-color: white;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+       
+        .tipos{
+            display: none;
+        }
+
+       
+
+        table {
+        width: 100%;
+        text-align: left;
+        background-color: white;
+        border-collapse: collapse;
+        overflow: scroll;
+        display: block;
+
+    }
+
+      
+
+        .content {
+            grid-auto-rows: 300px;
+            grid-template-columns: 1fr;
+            background-color: whitesmoke;
+
+        }
+
+        .cont:nth-of-type(1) {
+            box-shadow: none;
+        }
+
+        .cont {
+            border-radius: 1px;
+            height: auto;
+            margin: 20px 10px;
+            color: black;
+            padding: 20px 10px;
+            background-color: white;
+        }
+
+    }
