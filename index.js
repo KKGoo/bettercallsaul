@@ -1,89 +1,69 @@
-const usuarios = [
-    {
-        "nombre": "Juan",
-        "edad": 30,
-        "ciudad": "Madrid",
-        "casado": false,
-        "hobbies": ["fútbol", "leer", "bailar"]
-    },
-    {
-        "nombre": "María",
-        "edad": 25,
-        "ciudad": "Barcelona",
-        "casado": true,
-        "hobbies": ["pintar", "viajar", "cocinar"]
-    },
-    {
-        "nombre": "Carlos",
-        "edad": 40,
-        "ciudad": "Sevilla",
-        "casado": true,
-        "hobbies": ["música", "nadar", "jardinería"]
-    },
-    {
-        "nombre": "Ana",
-        "edad": 28,
-        "ciudad": "Valencia",
-        "casado": false,
-        "hobbies": ["yoga", "senderismo", "fotografía"]
-    },
-    {
-        "nombre": "Luis",
-        "edad": 35,
-        "ciudad": "Málaga",
-        "casado": true,
-        "hobbies": ["ciclismo", "pescar", "videojuegos"]
-    },
-    {
-        "nombre": "Laura",
-        "edad": 22,
-        "ciudad": "Bilbao",
-        "casado": false,
-        "hobbies": ["baile", "teatro", "compras"]
-    },
-    {
-        "nombre": "Pedro",
-        "edad": 31,
-        "ciudad": "Alicante",
-        "casado": false,
-        "hobbies": ["cocina", "pintura", "ajedrez"]
-    },
-    {
-        "nombre": "Sara",
-        "edad": 27,
-        "ciudad": "Granada",
-        "casado": true,
-        "hobbies": ["senderismo", "música", "ver películas"]
-    },
-    {
-        "nombre": "Miguel",
-        "edad": 33,
-        "ciudad": "Zaragoza",
-        "casado": true,
-        "hobbies": ["deportes", "lectura", "bricolaje"]
-    },
-    {
-        "nombre": "Isabel",
-        "edad": 29,
-        "ciudad": "Palma de Mallorca",
-        "casado": false,
-        "hobbies": ["surf", "pasear perros", "juegos de mesa"]
-    }
-];
+// Array to store the fetched user data
+const users = [];
 
-function users(data) {
-    const table = document.getElementById('tabla');
-    const mapUsers = data.map((name) => `<tr>
-    <td>${name.nombre}</td><td>${name.edad}</td><td>${name.casado ? `si` : `no`}</td><td>${name.ciudad}</td><td>${name.hobbies } </td>
-    </tr>`)
-    table.innerHTML = `
-    <thead>
-        <tr>
-            <th>Nombre</th><th>Edad</th><th>Casado</th><th>Ciudad</th><th>Hobbies</th>
-        </tr>
-    </thead>
-    ${mapUsers}
-`;
+// Function to fetch user data from the API
+async function fetchData() {
+  try {
+    const response = await fetch("https://randomuser.me/api/?results=20");
+    const data = await response.json();
+    // Add fetched user data to the 'users' array
+    users.push(...data.results);
+    // Render the table with the user data
+    renderTable();
+  } catch (error) {
+    console.log("Error fetching data:", error);
+  }
 }
 
-users(usuarios)
+// Function to render the table with user data
+function renderTable() {
+  const table = document.getElementById("tabla");
+  const mapUsers = users
+    .map(
+      (user) => `
+        <tr data-user-id="${user.dob.age}">
+          <td>${user.name.first}</td>
+          <td>${user.dob.age}</td>
+          <td>${user.casado ? "si" : "no"}</td>
+          <td>${user.location.city}</td>
+        </tr>
+      `
+    )
+    .join("");
+
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Casado</th>
+        <th>Ciudad</th>
+      </tr>
+    </thead>
+    ${mapUsers}
+  `;
+
+  // Attach click event listeners to table rows
+  const rows = table.getElementsByTagName("tr");
+  for (let i = 0; i < rows.length; i++) {
+    rows[i].addEventListener("click", selectUser);
+  }
+}
+
+// Function to handle user selection
+function selectUser(event) {
+  // Extract the user ID from the clicked table row
+  const userId = parseInt(event.currentTarget.getAttribute("data-user-id"));
+  // Find the selected user from the 'users' array
+  const selectedUser = users.find((user) => user.dob.age === userId);
+
+  if (selectedUser) {
+    // Store the selected user data in localStorage
+    localStorage.setItem("selectedUser", JSON.stringify(selectedUser));
+    // Redirect to the usuario.html page
+    window.location.href = "file:///C:/Users/Santiago/Documents/GitHub/bettercallsaul/usuario.html";
+  }
+}
+
+// Fetch user data and render the table
+fetchData();

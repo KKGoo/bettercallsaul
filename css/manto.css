@@ -1,0 +1,271 @@
+    body {
+        margin: 0;
+        font-family: 'Montserrat';
+        background-color: white;
+    }
+   
+
+
+    .footer {
+        margin-top: 20px;
+        color: white;
+        padding: 20px;
+        background-color: gray;
+    }
+
+    .burguer-button {
+        padding: 10px;
+        display: none;
+    }
+
+
+    
+/*tabla*/
+
+    
+    table {
+        width: 100%;
+        text-align: left;
+        background-color: white;
+        border-collapse: collapse;
+    }
+
+    th {
+        color: white;
+        background-color: #4e73df;
+    }
+
+    .list {
+        margin: 20px;
+        overflow: scroll;
+        height: 500px;
+    }
+
+    .list::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .list::-webkit-scrollbar-thumb {
+        background-color: #4e73df;
+    }
+
+
+    td,
+    th {
+        padding: 20px;
+        margin: 0;
+    }
+
+    tr {
+        transition: 0.3s;
+    }
+
+    tr:hover {
+        background-color: #4e73df;
+        color: white;
+        cursor: pointer;
+    }
+
+    tr:nth-child(even) {
+        background-color: #cedaff;
+    }
+
+    tr:nth-child(even):hover {
+        background-color: #4e73df;
+    }
+
+    td {
+        margin: 0;
+    }
+
+
+/* tabla */
+
+
+
+
+ /* basics*/
+    .h1{
+        background-color: #4e73df;
+        padding: 10px;
+        margin: 0px 10px;
+        color: white;
+    }
+    .h2{
+        background-color: #4e73df;
+        padding: 5px;
+        margin: 10px;
+        color: white;
+    }
+
+    /*form*/
+    .form-control {
+        border-radius: 1px;
+        height: auto;
+        margin: 0px 10px 10px 10px;
+        color: black;
+        padding: 20px 10px;
+        background-color: white;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+
+    /*select*/
+    .select {
+        width: 100%;
+        max-width: 200px;
+        font-size: 16px;
+        font: inherit;
+        margin: 10px;
+        border: 1px solid darkgray;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    /*text-area*/
+    .area {
+        font-size: 15px;
+        font: inherit;
+        width: 100%;
+        height: 150px;
+        margin-left: 10px;
+        border: #3f5cb4 solid 1px;
+    }
+
+    /*label*/
+    .info {
+        margin: 10px;
+        width: 130px;
+        text-decoration: inherit;
+        color: inherit;
+    }
+
+
+
+
+    /*input*/
+    .input {
+        font: inherit;
+        font-size: 16px;
+        margin: 10px;
+         width: 100%;
+        max-width: 200px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid darkgray;
+
+    }
+/* basics */
+
+
+/* botones */
+
+
+    /* boton normal */
+    .button {
+        vertical-align: top;
+        width: auto;
+        height: 40px;
+        font-size: 20px;
+        color:  white;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        -webkit-box-shadow: inset 0 -2px gray;
+        box-shadow: inset 0 -2px gray;
+        margin: 10px;
+        border: 0;
+        border-bottom: 4px solid #3f5db6 ;
+        background-color: #4e73df;
+    }
+    .button:active {
+        top: 1px;
+        outline: none;
+        border-bottom: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+
+
+    /* agregar */
+    .add {
+        vertical-align: top;
+        width: auto;
+        height: 40px;
+        font-size: 20px;
+        color:  white;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        -webkit-box-shadow: inset 0 -2px gray;
+        box-shadow: inset 0 -2px gray;
+        margin: 10px;
+        background-color: rgb(39, 156, 108);
+        border: 0;
+        border-bottom: 4px solid rgb(27, 121, 82) ;
+    }
+    .add:active {
+        outline: none;
+        border-bottom: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+
+
+
+    /* cancelar */
+    .cancel {
+        vertical-align: top;
+        width: auto;
+        height: 40px;
+        font-size: 20px;
+        color:  white;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        -webkit-box-shadow: inset 0 -2px gray;
+        box-shadow: inset 0 -2px gray;
+        margin: 10px;
+        border: 0;
+        border-bottom: 4px solid rgb(148, 16, 43) ;
+        background-color: crimson;
+    }
+    .cancel:active {
+        outline: none;
+        border-bottom: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+
+
+
+    /* orange */
+    .warning {
+        vertical-align: top;
+        width: auto;
+        height: 40px;
+        font-size: 20px;
+        color:  white;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        -webkit-box-shadow: inset 0 -2px gray;
+        box-shadow: inset 0 -2px gray;
+        margin: 10px;
+        border: 0;
+        border-bottom: 4px solid rgb(189, 52, 2) ;
+        background-color: orangered;
+    }
+    .warning:active {
+        outline: none;
+        border-bottom: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+/* botones */
+
+

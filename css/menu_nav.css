@@ -1,0 +1,472 @@
+    
+    .wrapper {
+        color: black;
+        display: grid;
+        grid-template-rows: [inicio] 60px;
+        grid-template-columns: [inicio] 250px [linea1] 1fr [linea2] auto [final];
+        top: 0;
+        position: fixed;
+        width: 100%;
+        margin: 1;
+    }
+    .item:nth-of-type(1) {
+        grid-column: inicio/linea1;
+        background-color: #4e73df;
+        display: flex;
+        color: white;
+        grid-row: inicio;
+        justify-content: left;
+        align-items: center;
+        align-content: center;
+        padding-left: 10px;
+    }
+    .item:nth-of-type(2) {
+        grid-row: inicio;
+        grid-column: linea2/final;
+        border-bottom: 1px rgba(0, 0, 0, 0.212) solid;
+        padding: 20px;
+        background-color: white;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+    }
+    .item:nth-of-type(2) span {
+        font-size: 30px;
+    }
+    .item:nth-of-type(3) {
+        background-color: white;
+        grid-row: inicio;
+    }
+    .item:nth-of-type(4) {
+        border-bottom: 1px rgba(0, 0, 0, 0.212) solid;
+        grid-row: inicio;
+        grid-column: linea1/linea2;
+        padding: 20px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        transition: 0s;
+    }
+    #manto {
+        transition: 0.8s;
+
+    }
+    .menu {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 250;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        margin-top: 60px;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.8s;
+        background-color: #4e73df;
+        margin-right: 10px;
+    }
+    .menu a {
+        padding: 5px 5px 5px 5px;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        transition: 0.9s;
+        margin: 10px;
+        color: white;
+    }
+    .menu .closebtn2 {
+        font-size: 36px;
+        margin: 0;
+        display: none;
+    }
+    .closebtn {
+        font-size: 36px;
+        margin: 0px 10px;
+        padding: 0;
+        top: 10px;
+        text-decoration: none;
+        color: black;
+        display: none;
+    }
+    .closebtn2 {
+        font-size: 36px;
+        margin: 0px 10px;
+        padding: 0;
+        top: 10px;
+        text-decoration: none;
+        color: black;
+        display: none;
+    }
+    .menu li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 250px;
+        border-top: 0.3px solid rgba(29, 29, 29, 0.671);
+    }
+
+    .menu li:hover {
+        background-color: #3f5cb4;
+        transition: 0.2s;
+    }
+    .menu h2 {
+        background-color: white;
+    }
+    .menu::-webkit-scrollbar {
+        display: none;
+        /* Ocultar scroll */
+    }
+    .user-two {
+        display: none;
+    }
+    .user {
+        color: black;
+        position: absolute;
+        background-color: white;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        width: 235px;
+        display: flex;
+        position: sticky;
+        justify-content: space-between;
+        flex-direction: row;
+        top: 0;
+        height: 56px;
+    }
+    .usuario {
+        display: flex;
+        flex-direction: row;
+        color: #4e73df;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 10px;
+    }
+    .burguer-button {
+        padding: 10px;
+        display: none;
+    }
+    .search {
+        width: 400px;
+        height: 34px;
+        font-size: 16px;
+        border-radius: 10px 0px 0px 10px;
+        border: #4e73df 1px solid;
+        padding-left: 10px;
+    }
+    .search-button {
+        height: 25px;
+        padding: 7px 10px 6px 7px;
+        background-color: #4e73df;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .search-area {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+        transition: 0.8s;
+        border: 0;
+        align-items: center;
+
+    }
+
+    .menu span {
+        font-size: 20px;
+        margin: 10px;
+        color: white;
+    }
+
+    .user-two span {
+        color: white;
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    .user span {
+        color: black;
+        font-size: 25px;
+    }
+
+    .item:nth-of-type(2) span {
+        color: #4e73df;
+    }
+
+
+    @media screen and (max-width: 1040px) {
+        
+        .wrapper {
+            color: black;
+            grid-template-rows: [inicio] 60px;
+            grid-template-columns: [inicio] 90px [linea1] 120px [linea2] 1fr [final];
+            top: 0;
+            position: fixed;
+            width: 100%;
+            margin: 1;
+        }
+        .menu .closebtn2 {
+            font-size: 36px;
+            margin: 0;
+            display: block;
+        }
+        .item:nth-of-type(1) {
+            border-bottom: 1px rgba(0, 0, 0, 0.212) solid;
+            grid-column: linea1/linea2;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-row: inicio;
+        }
+
+        .item:nth-of-type(2) {
+            grid-column: inicio/fila1;
+            grid-row: inicio;
+            color: black;
+            display: none;
+            width: 0;
+            position: fixed;
+            flex-direction: row;
+            z-index: 1;
+            top: 0;
+            padding-left: 20px;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.8s;
+            background-color: #4e73df;
+            margin-right: 10px;
+            padding: 0;
+            height: 60px;
+            border-bottom: 1px rgba(0, 0, 0, 0.212) solid;
+
+        }
+
+
+        .item:nth-of-type(3) {
+            background-color: white;
+            grid-column: inicio/linea1;
+            grid-row: inicio;
+            display: flex;
+            padding-left: 10px;
+            border-bottom: 1px rgba(0, 0, 0, 0.212) solid;
+
+        }
+
+        .item:nth-of-type(4) {
+            justify-items: right;
+            grid-row: inicio;
+            grid-column: linea2/final;
+            justify-content: flex-end;
+            padding: 10px 5px;
+            border-bottom: 1px rgba(0, 0, 0, 0.212) solid;
+
+
+        }
+        .item:nth-of-type(5) {
+            grid-column: inicio/linea1;
+            grid-row: inicio;
+            border-bottom: 1px rgba(0, 0, 0, 0.212) solid;
+
+        }
+
+        #manto {
+            color: #4e73df;
+            transition: 0.8s;
+        }
+
+        .menu {
+            width: 0;
+            z-index: 1;
+            top: 0;
+        }
+        .menu a:hover {
+            color: rgb(223, 167, 14);
+        }
+
+        .closebtn {
+            font-size: 36px;
+            margin: 0px 10px;
+            padding: 0;
+            top: 10px;
+            text-decoration: none;
+            color: black;
+            display: none;
+        }
+
+        .menu .closebtn2 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+
+        .usuario {
+            color: white;
+            width: 100%;
+        }
+
+        .user-two {
+            display: flex;
+            flex-direction: row;
+            width: 0;
+            height: 60px;
+            align-items: center;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.8s;
+            background-color: #4e73df;
+        }
+
+        .userTwo span {
+            color: white;
+            margin-left: 10px;
+        }
+
+        .burguer-button {
+            display: block;
+            width: 50px;
+            color: #4e73df;
+        }
+
+        .search {
+            width: 250px;
+            height: 22px;
+        }
+
+        .search-button {
+            margin: 10px;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        
+
+       
+        .search-area {
+            right: 10;
+            width: auto;
+            position: fixed;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) { 
+        .wrapper {
+            grid-template-rows: [inicio] 60px;
+            grid-template-columns: [inicio] 1fr [linea1] 1fr [linea2] 1fr [final];
+            top: 0;
+            position: fixed;
+            width: 100%;
+            margin: 1;
+        }
+           
+        .item:nth-of-type(1) {
+            grid-column: linea1/linea2;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        .item:nth-of-type(2) {
+            padding: 0px;
+            justify-content: space-between;
+        }
+
+        .item:nth-of-type(3) {
+            grid-column: inicio/linea1;
+            display: flex;
+            padding-left: 10px;
+        }
+
+        #manto {
+            transition: 0.8s;
+        }
+
+        .menu {
+            width: 0;
+            top: 0;
+        }
+
+        .user-two a{
+            font-size: 36px;
+            margin: 0px 10px;
+            padding: 0;
+            top: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .menu a {
+            padding: 5px 5px 5px 5px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.9s;
+            margin: 10px;
+        }
+        .closebtn-2{
+            font-size: 36px;
+            margin: 0px 10px;
+            padding: 0;
+            top: 10px;
+            text-decoration: none;
+            color: black;
+        }
+       
+        .menu .closebtn2 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .user {
+            position: fixed;
+            padding: 2px 8px 2px 8px;
+        }
+
+        .user-two {
+            color: white;
+            padding-left: 10px;
+            align-items: center;
+            padding: 0;
+            justify-content: space-between;
+        }
+
+
+        .usuario {
+            width: 100%;
+        }
+
+
+        .search {
+            width: 0;
+            height: 22px;
+            border: 0;
+            transition: 0.6s;
+        }
+
+        .search-button {
+            margin: 10px;
+        }
+        
+      
+
+        .search-area {
+            right: 10;
+            width: auto;
+        }
+
+      
+
+        .menu .closebtn2 {
+            font-size: 36px;
+            margin: 0;
+            display: block;
+        }
+    }
