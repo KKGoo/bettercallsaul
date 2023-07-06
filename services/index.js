@@ -61,7 +61,7 @@ function selectUser(event) {
     // Store the selected user data in localStorage
     localStorage.setItem("selectedUser", JSON.stringify(selectedUser));
     // Redirect to the usuario.html page
-    window.location.href = "file:///C:/Users/Santiago/Documents/GitHub/bettercallsaul/usuario.html";
+    window.location.href = "file:///C:/Users/dealp/desktop/bettercallsaul/usuario.html";
   }
 }
 
