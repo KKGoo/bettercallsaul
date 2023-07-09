@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/manto.css">
     <link rel="stylesheet" href="css/menu_nav.css">
     <script>
-        const cat = localStorage.getItem("selectedUser");
         var cell = false;
         var tablet = false;
         var desktop = false;
@@ -19,7 +18,6 @@
         var onsearch = false;
         var hamMenuFloat = false;
         var hamMenuPush = false;
-        console.log(cat)
         window.onresize = function () {
             // celular
             if (window.matchMedia("(min-width: 320px)").matches && window.matchMedia("(max-width: 600px)").matches) {
@@ -190,7 +188,7 @@
     </div>
     <div id="conten" class="content">
         <h1 class="h1">Usuario</h1>
-        <div class="cont">
+        <div id="data" class="cont">
             <div class="information">
                 <img class="image" style="border: solid 1px rgb(37, 37, 37);" src="dude.jpeg" alt="">
             </div>
@@ -198,68 +196,13 @@
                 <p class="info">Nombre:</p>
                 <p class="info">julio jaramillo</p>
             </div>
-            <div class="information">
-                <p class="info">No documento:</p>
-                <p class="info">1126318019</p>
-            </div>
-            <div class="information">
-                <p class="info">Tipo de documento:</p>
-                <p class="info">cedula</p>
-            </div>
-            <div class="information">
-                <p class="info">Teléfono:</p>
-                <p class="info">+57 3108526552</p>
-                <button class="add">edit</button>
-            </div>
-            <div class="information">
-                <p class="info">Mail:</p>
-                <a href="" class="info" >example@ mail.com</a>
-                <button class="add">edit</button>
-            </div>
-            <div class="information">
-                <p class="info">Especialidad:</p>
-                <p class="info">alumbrado</p>
-            </div>
-            <div class="information">
-                <p class="info">Cargo:</p>
-                <p class="info">subdirector</p>
-                <button class="add">edit</button>
-            </div>
-            <div class="information">
-                <p class="info">Ciudad:</p>
-                <p class="info">neiva</p>
-                <button class="add">edit</button>
-            </div>
-            <div class="information">
-                <p class="info">Area:</p>
-                <p class="info">industria</p>
-            </div>
-            <div class="information">
-                <p class="info">Pais:</p>
-                <select class="select" name="" id="">
-                    <option selected value="">colombia</option>
-                    <option value="">lorem</option>
-                    <option value="">lorem</option>
-                    <option value="">lorem</option>
-
-                </select>
-            </div>
-            <div class="information">
-                <p class="info">Direccion:</p>
-                <p class="info">cra 86 </p>
-            </div>
-            <div class="information">
-                <p class="info">Empresa:</p>
-                <p class="info">citrol</p>
-            </div>
-            <div class="information">
-                <p class="info">Salario:</p>
-            </div>
+           
         </div>
 
 
         <button class="button">Atras</button>
     </div>
+    <script src="services/profile.js"></script>
 
 </body>
 
